@@ -1,24 +1,24 @@
 {
   "categories": [
     {
-      "name": "动作片",
-      "slug": "action",
+      "name": "电视剧",
+      "slug": "drama",
       "videos": [
         {
-          "title": "绝地战警",
-          "cover": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Missing_cover.jpg",
-          "release": "2023-06-10",
-          "actors": ["威尔·史密斯", "马丁·劳伦斯"],
-          "description": "两位警探携手打击毒品犯罪。",
-          "url": "https://example.com/play?id=1001"
+          "title": "花间令",
+          "cover": "https://dash.cecily.eu.org/file/AgACAgUAAyEGAASEFP0qAANYZ_H1z-bVH_7k2eO_CoNaeayLaMkAAk3DMRu5NJFX0JvT2LRMnCMBAAMCAAN3AAM2BA.jpeg",
+          "release": "2024-03-15",
+          "actors": ["鞠婧祎", "刘学义"],
+          "description": "2024年钟青执导的古装探案剧。",
+          "url": "https://blossom.cecily.eu.org/"
         },
         {
-          "title": "特种部队",
-          "cover": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Missing_cover.jpg",
+          "title": "仙剑四",
+          "cover": "https://dash.cecily.eu.org/file/AgACAgUAAyEGAASEFP0qAANZZ_H2gGXfYEpY5JubRW13nad1f3IAAlDDMRu5NJFXRbwfab-j1EEBAAMCAAN3AAM2BA.jpeg",
           "release": "2022-08-20",
-          "actors": ["动作演员 A", "动作演员 B"],
-          "description": "军事小队突袭敌方基地。",
-          "url": "https://example.com/play?id=1002"
+          "actors": ["鞠婧祎", "陈哲远"],
+          "description": "2024年杨玄执导的古装仙侠。",
+          "url": "https://sword.cecily.eu.org/"
         }
       ]
     }
