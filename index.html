@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>春田花花影视站</title>
-  <link rel="stylesheet" href="assets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春田花花影视站</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="影聚网 LOGO" class="logo" />
-    <h1>春田花花影视站</h1>
-    <a href="admin.html" class="admin-link">后台管理</a>
-  </header>
+    <header>
+        <h1>春田花花影视站影视站</h1>
+    </header>
+    <main>
+        <section id="categories">
+            <h2>影视分类</h2>
+            <ul id="category-list">
+                <!-- 分类列表由 JS 填充 -->
+            </ul>
+        </section>
+        <section id="movies">
+            <h2>最新更新</h2>
+            <div id="movie-list">
+                <!-- 电影列表由 JS 填充 -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 春田花花影视站</p>
+    </footer>
 
-  <div class="container">
-    <nav id="category-list"></nav>
-    <div class="search-bar">
-      <input type="text" id="search-input" placeholder="搜索影片..." />
-      <button onclick="searchVideos()">搜索</button>
-    </div>
-    <div id="recently-watched">
-      <h2>最近观看</h2>
-      <ul id="recently-watched-list"></ul>
-    </div>
-    <div id="favorites">
-      <h2>我的收藏</h2>
-      <ul id="favorites-list"></ul>
-    </div>
-    <div id="video-list"></div>
-  </div>
+    <script>
+        // 使用 fetch 获取数据并渲染分类和电影列表
+        fetch('/data/categories.json')
+            .then(response => response.json())
+            .then(categories => {
+                const categoryList = document.getElementById('category-list');
+                categories.forEach(category => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = category.name;
+                    categoryList.appendChild(listItem);
+                });
+            });
 
-  <script src="assets/scripts.js"></script>
+        fetch('/data/movies.json')
+            .then(response => response.json())
+            .then(movies => {
+                const movieList = document.getElementById('movie-list');
+                movies.forEach(movie => {
+                    const movieItem = document.createElement('div');
+                    movieItem.classList.add('movie-item');
+                    movieItem.innerHTML = `
+                        <img src="${movie.cover_image}" alt="${movie.title}">
+                        <h3>${movie.title}</h3>
+                        <p>${movie.description}</p>
+                        <a href="${movie.link}" target="_blank">点击观看</a>
+                    `;
+                    movieList.appendChild(movieItem);
+                });
+            });
+    </script>
 </body>
 </html>
