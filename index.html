@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>春田花花影视站</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="影聚网 LOGO" class="logo" />
+    <h1>春田花花影视站</h1>
+    <a href="admin.html" class="admin-link">后台管理</a>
+  </header>
+
+  <div class="container">
+    <nav id="category-list"></nav>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="搜索影片..." />
+      <button onclick="searchVideos()">搜索</button>
+    </div>
+    <div id="recently-watched">
+      <h2>最近观看</h2>
+      <ul id="recently-watched-list"></ul>
+    </div>
+    <div id="favorites">
+      <h2>我的收藏</h2>
+      <ul id="favorites-list"></ul>
+    </div>
+    <div id="video-list"></div>
+  </div>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
