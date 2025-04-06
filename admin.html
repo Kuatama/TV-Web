@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>春田花花影视站 - 后台管理</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jsoneditor@9.5.6/dist/jsoneditor.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsoneditor@9.5.6/dist/jsoneditor.min.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="影聚网 LOGO" class="logo" />
+    </a>
+    <h1>春田花花影视站后台管理</h1>
+  </header>
+
+  <div class="container">
+    <div id="jsoneditor" style="height: 600px;"></div>
+    <button onclick="saveData()">保存更改</button>
+  </div>
+
+<script>
+  const password = prompt("请输入后台管理密码：");
+  if (password !== "Dfr520821@") {
+    alert("密码错误！");
+    window.location.href = "index.html";
+  }
+</script>
+  
+  <script>
+    const container = document.getElementById('jsoneditor');
+    const options = {};
+    const editor = new JSONEditor(container, options);
+
+    fetch('data/videos.json')
+      .then(response => response.json())
+      .then(json => {
+        editor.set(json);
+      });
+
+    function saveData() {
+      const updatedJson = editor.get();
+      // 这里可以将 updatedJson 发送到服务器保存
+      console.log(updatedJson);
+      alert('数据已保存（请在实际应用中实现保存功能）');
+    }
+  </script>
+</body>
+</html>
