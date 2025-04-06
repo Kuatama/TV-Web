@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "花间令",
+    "description": "2024年钟青执导的古装探案剧",
+    "release_date": "2024-03-15",
+    "cast": "鞠婧祎, 刘学义",
+    "episode_count": 32,
+    "cover_image": "/assets/images/movie1.jpg",
+    "category": "电视剧",
+    "link": "https://blossom.cecily.eu.org/"
+  },
+  {
+    "id": 2,
+    "title": "电影名称 2",
+    "description": "电影描述 2",
+    "release_date": "2023-02-01",
+    "cast": "演员 C, 演员 D",
+    "episode_count": 12,
+    "cover_image": "/assets/images/movie2.jpg",
+    "category": "Drama",
+    "link": "https://example.com/movie2"
+  }
+]
