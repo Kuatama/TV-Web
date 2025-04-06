@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影详情</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>影视详情</h1>
+    </header>
+    <main>
+        <section id="movie-detail">
+            <h2 id="movie-title"></h2>
+            <img id="movie-cover" alt="电影封面">
+            <p id="movie-description"></p>
+            <p id="movie-cast"></p>
+            <p id="movie-release-date"></p>
+            <p id="episode-count"></p>
+            <a id="movie-link" href="" target="_blank">点击观看</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 <!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影详情</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>电影详情</h1>
+    </header>
+    <main>
+        <section id="movie-detail">
+            <h2 id="movie-title"></h2>
+            <img id="movie-cover" alt="电影封面">
+            <p id="movie-description"></p>
+            <p id="movie-cast"></p>
+            <p id="movie-release-date"></p>
+            <p id="episode-count"></p>
+            <a id="movie-link" href="" target="_blank">点击观看</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 春田花花影视站</p>
+    </footer>
+
+    <script>
+        // 获取 URL 参数并渲染电影详情
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id');
+
+        fetch('/data/movies.json')
+            .then(response => response.json())
+            .then(movies => {
+                const movie = movies.find(m => m.id == movieId);
+                if (movie) {
+                    document.getElementById('movie-title').textContent = movie.title;
+                    document.getElementById('movie-cover').src = movie.cover_image;
+                    document.getElementById('movie-description').textContent = movie.description;
+                    document.getElementById('movie-cast').textContent = `演员: ${movie.cast}`;
+                    document.getElementById('movie-release-date').textContent = `上映日期: ${movie.release_date}`;
+                    document.getElementById('episode-count').textContent = `集数: ${movie.episode_count}`;
+                    document.getElementById('movie-link').href = movie.link;
+                }
+            });
+    </script>
+</body>
+</html></p>
+    </footer>
+
+    <script>
+        // 获取 URL 参数并渲染电影详情
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id');
+
+        fetch('/data/movies.json')
+            .then(response => response.json())
+            .then(movies => {
+                const movie = movies.find(m => m.id == movieId);
+                if (movie) {
+                    document.getElementById('movie-title').textContent = movie.title;
+                    document.getElementById('movie-cover').src = movie.cover_image;
+                    document.getElementById('movie-description').textContent = movie.description;
+                    document.getElementById('movie-cast').textContent = `演员: ${movie.cast}`;
+                    document.getElementById('movie-release-date').textContent = `上映日期: ${movie.release_date}`;
+                    document.getElementById('episode-count').textContent = `集数: ${movie.episode_count}`;
+                    document.getElementById('movie-link').href = movie.link;
+                }
+            });
+    </script>
+</body>
+</html>
